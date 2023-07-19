@@ -1,0 +1,17 @@
+rootProject.name = 'arch4j-composite'
+
+// defines modules
+gradle.ext.modules = [
+        "../arch4j",
+        "../batman",
+        "../soma"
+]
+
+// load composite build
+gradle.ext.modules.each { module ->
+    def directory = file(module)
+    if(directory.exists() && directory.listFiles({it.getName() == "build.gradle"} as FileFilter).length) {
+        includeBuild(module)
+    }
+}
+
