@@ -4,7 +4,8 @@ rootProject.name = 'arch4j-composite'
 gradle.ext.modules = [
         "../arch4j",
         "../batman",
-        "../soma"
+        "../soma",
+        "../fintics"
 ]
 
 // load composite build
