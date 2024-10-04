@@ -5,8 +5,7 @@ gradle.ext.modules = [
         "../arch4j",
         "../batman",
         "../soma",
-        "../fintics",
-        "../fintics-bridge-kiwoom"
+        "../fintics"
 ]
 
 // load composite build
