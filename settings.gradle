@@ -1,14 +1,14 @@
 rootProject.name = 'arch4j-composite'
 
 // defines modules
-gradle.ext.modules = [
+def modules = [
         "../arch4j",
         "../fintics",
-        "../fintics-etf"
+//        "../fintics-etf"
 ]
 
 // load composite build
-gradle.ext.modules.each { module ->
+modules.each { module ->
     def directory = file(module)
     if(directory.exists() && directory.listFiles({it.getName() == "build.gradle"} as FileFilter).length) {
         includeBuild(module)
